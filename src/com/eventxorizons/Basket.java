@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Created by dev on  02/09/2020.
+ * Created by dev on 17/02/2016.
  */
 public class Basket {
     private final String name;
@@ -23,6 +23,27 @@ public class Basket {
             return inBasket;
         }
         return 0;
+    }
+
+    public int removeFromBasket(StockItem item, int quantity) {
+        if((item != null) && (quantity > 0)) {
+            // check if we already have the item in the basket
+            int inBasket = list.getOrDefault(item, 0);
+            int newQuantity = inBasket - quantity;
+
+            if(newQuantity > 0) {
+                list.put(item, newQuantity);
+                return quantity;
+            } else if(newQuantity == 0) {
+                list.remove(item);
+                return quantity;
+            }
+        }
+        return 0;
+    }
+
+    public void clearBasket() {
+        this.list.clear();
     }
 
     public Map<StockItem, Integer> Items() {
