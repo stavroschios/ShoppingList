@@ -1,7 +1,7 @@
 package com.eventxorizons;
 
 /**
- * Created by dev on 16/02/2016.
+ * Created by dev on 02/09/2020.
  */
 public class StockItem implements Comparable<StockItem> {
     private final String name;
