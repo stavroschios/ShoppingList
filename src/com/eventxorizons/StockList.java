@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Created by dev on 16/02/2016.
+ * Created by dev on 02/09/2020.
  */
 public class StockList {
     private final Map<String, StockItem> list;
